@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png"; // adjust path if not using @ alias
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +17,20 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          
+          {/* Logo + Brand */}
           <div className="flex items-center gap-3">
-            <div 
-              className="h-12 w-12 rounded-full flex items-center justify-center text-white"
-              style={{ backgroundColor: "var(--charity-plum)" }}
-            >
-              <span className="text-xl">JLF</span>
+            <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center">
+              <img
+                src={logo}
+                alt="Jeewana Lanka Foundation Logo"
+                className="h-full w-full object-contain"
+              />
             </div>
-            <span className="text-xl" style={{ color: "var(--charity-dark-plum)" }}>
+            <span
+              className="text-xl font-medium"
+              style={{ color: "var(--charity-dark-plum)" }}
+            >
               Jeewana Lanka Foundation
             </span>
           </div>
@@ -37,6 +44,7 @@ export function Navigation() {
             >
               About
             </button>
+
             <button
               onClick={() => scrollToSection("impact")}
               className="hover:opacity-80 transition-opacity"
@@ -44,6 +52,7 @@ export function Navigation() {
             >
               Our Impact
             </button>
+
             <button
               onClick={() => scrollToSection("what-we-do")}
               className="hover:opacity-80 transition-opacity"
@@ -51,6 +60,7 @@ export function Navigation() {
             >
               What We Do
             </button>
+
             <button
               onClick={() => scrollToSection("donate")}
               className="px-6 py-2 rounded-lg text-white transition-all"
@@ -58,12 +68,14 @@ export function Navigation() {
                 backgroundColor: "var(--charity-plum)",
                 boxShadow: "0 4px 12px rgba(155, 92, 119, 0.3)",
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "var(--charity-dark-plum)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "var(--charity-plum)";
-              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor =
+                  "var(--charity-dark-plum)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor =
+                  "var(--charity-plum)")
+              }
             >
               Donate Now
             </button>
@@ -81,7 +93,10 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-4" style={{ borderTop: "1px solid var(--charity-divider)" }}>
+          <div
+            className="md:hidden py-4 space-y-4"
+            style={{ borderTop: "1px solid var(--charity-divider)" }}
+          >
             <button
               onClick={() => scrollToSection("about")}
               className="block w-full text-left py-2"
@@ -89,6 +104,7 @@ export function Navigation() {
             >
               About
             </button>
+
             <button
               onClick={() => scrollToSection("impact")}
               className="block w-full text-left py-2"
@@ -96,6 +112,7 @@ export function Navigation() {
             >
               Our Impact
             </button>
+
             <button
               onClick={() => scrollToSection("what-we-do")}
               className="block w-full text-left py-2"
@@ -103,6 +120,7 @@ export function Navigation() {
             >
               What We Do
             </button>
+
             <button
               onClick={() => scrollToSection("donate")}
               className="w-full px-6 py-2 rounded-lg text-white"
