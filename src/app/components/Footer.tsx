@@ -126,14 +126,14 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={20} color="white" className="flex-shrink-0 mt-1" />
                 <span className="text-white opacity-90">
-                  123 Main Street, Colombo, Sri Lanka
+                  No.27/G, Polhena Watta, Gangabada Road, Wewela, Piliyandala
                 </span>
               </li>
 
               <li className="flex items-center gap-3">
                 <Phone size={20} color="white" className="flex-shrink-0" />
                 <span className="text-white opacity-90">
-                  +94 11 234 5678
+                  +94 77 4205601
                 </span>
               </li>
 
