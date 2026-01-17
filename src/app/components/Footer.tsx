@@ -7,7 +7,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import logo from "../assets/logo.png"; // same path as Navigation
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
