@@ -133,7 +133,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone size={20} color="white" className="flex-shrink-0" />
                 <span className="text-white opacity-90">
-                  +94 77 4205601
+                  +94 77 104 7330
                 </span>
               </li>
 
