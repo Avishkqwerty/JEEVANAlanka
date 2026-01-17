@@ -1,4 +1,13 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import logo from "../assets/logo.png"; // same path as Navigation
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -9,26 +18,33 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--charity-dark-plum)" }}>
+    <footer
+      className="py-16 px-4 sm:px-6 lg:px-8"
+      style={{ backgroundColor: "var(--charity-dark-plum)" }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
+          
           {/* Logo and About */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3 mb-4">
-              <div 
-                className="h-12 w-12 rounded-full flex items-center justify-center text-white"
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
-              >
-                <span className="text-xl">JLF</span>
+              <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt="Jeewana Lanka Foundation Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
               <span className="text-xl text-white">
                 Jeewana Lanka Foundation
               </span>
             </div>
+
             <p className="text-white opacity-90">
-              Transforming lives through compassion and sustainable development. Together, we create lasting change
-              across Sri Lankan communities.
+              Transforming lives through compassion and sustainable development.
+              Together, we create lasting change across Sri Lankan communities.
             </p>
+
             <div className="flex gap-4 pt-4">
               <a
                 href="#"
@@ -37,6 +53,7 @@ export function Footer() {
               >
                 <Facebook size={20} color="white" />
               </a>
+
               <a
                 href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:opacity-80"
@@ -44,6 +61,7 @@ export function Footer() {
               >
                 <Twitter size={20} color="white" />
               </a>
+
               <a
                 href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:opacity-80"
@@ -51,6 +69,7 @@ export function Footer() {
               >
                 <Instagram size={20} color="white" />
               </a>
+
               <a
                 href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:opacity-80"
@@ -110,12 +129,14 @@ export function Footer() {
                   123 Main Street, Colombo, Sri Lanka
                 </span>
               </li>
+
               <li className="flex items-center gap-3">
                 <Phone size={20} color="white" className="flex-shrink-0" />
                 <span className="text-white opacity-90">
                   +94 11 234 5678
                 </span>
               </li>
+
               <li className="flex items-center gap-3">
                 <Mail size={20} color="white" className="flex-shrink-0" />
                 <span className="text-white opacity-90">
@@ -131,7 +152,7 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(255, 255, 255, 0.2)" }}
         >
           <p className="text-white opacity-75">
-            2026 Jeewana Lanka Foundation. All rights reserved.
+            © 2026 Jeewana Lanka Foundation. All rights reserved.
           </p>
         </div>
       </div>
